@@ -1,0 +1,191 @@
+Index: practice_16/rectangle3.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/practice_16/rectangle3.py b/practice_16/rectangle3.py
+--- a/practice_16/rectangle3.py	(revision fb21a8f9b0d74ff32f51483c3d1571da11fa8fbf)
++++ b/practice_16/rectangle3.py	(date 1677666760350)
+@@ -1,0 +1,22 @@
++from rectangle2 import Rectangle, Square
++
++rect_1 = Rectangle(3,4)
++rect_2 = Rectangle(12,5)
++
++print(rect_1.get_area())
++print(rect_2.get_area())
++
++square_1 = Square(5)
++square_2 = Square(10)
++
++print(square_1.get_area_square(),
++      square_2.get_area_square())
++
++figures = [rect_1, rect_2, square_1, square_2]
++for figure in figures:
++    if isinstance(figure, Square):
++        print(figure.get_area_square())
++    else:
++        print(figure.get_area())
++
++
+Index: 123.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/123.txt b/123.txt
+--- a/123.txt	(revision fb21a8f9b0d74ff32f51483c3d1571da11fa8fbf)
++++ b/123.txt	(date 1677231545839)
+@@ -1,0 +1,1 @@
++123123
+\ No newline at end of file
+Index: Homework 13.8.19.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Homework 13.8.19.py b/Homework 13.8.19.py
+--- a/Homework 13.8.19.py	(revision fb21a8f9b0d74ff32f51483c3d1571da11fa8fbf)
++++ b/Homework 13.8.19.py	(date 1676478134356)
+@@ -1,0 +1,19 @@
++num_tickets = int(input("Введите количество билетов: "))
++total_cost = 0
++
++for i in range(num_tickets):
++    age = int(input(f"Введите возраст посетителя {i+1}: "))
++    if age < 18:
++        ticket_cost = 0
++    elif age < 25:
++        ticket_cost = 990
++    else:
++        ticket_cost = 1390
++    total_cost += ticket_cost
++
++if num_tickets > 3:
++    total_cost *= 0.9
++
++print(f"Общая стоимость билетов: {total_cost} руб.")
++
++
+Index: practice_16/rectangle.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>class Rectangle:\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n    def getWidth(self):\n        return self.width\n    def getHeight(self):\n        return self.height\n    def getArea(self):\n        return self.width * self.height\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/practice_16/rectangle.py b/practice_16/rectangle.py
+--- a/practice_16/rectangle.py	(revision fb21a8f9b0d74ff32f51483c3d1571da11fa8fbf)
++++ b/practice_16/rectangle.py	(date 1677665204935)
+@@ -2,10 +2,14 @@
+     def __init__(self, width, height):
+         self.width = width
+         self.height = height
++
+     def getWidth(self):
+         return self.width
++
+     def getHeight(self):
+         return self.height
++
+     def getArea(self):
+         return self.width * self.height
+ 
++
+Index: practice_16/testRectangle.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/practice_16/testRectangle.py b/practice_16/testRectangle.py
+--- a/practice_16/testRectangle.py	(revision fb21a8f9b0d74ff32f51483c3d1571da11fa8fbf)
++++ b/practice_16/testRectangle.py	(date 1677664984619)
+@@ -1,0 +1,12 @@
++from rectangle import Rectangle
++
++r1 = Rectangle(10,5)
++
++print('r1.width', r1.width)
++print('r1.height', r1.height)
++print('r1.getWidth', r1.getWidth())
++print('r1.getArea', r1.getArea())
++
++
++
++
+Index: script.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>money = int(input(\"Введите сумму вклада:\"))\nper_cent = {'ТКБ': 5.6, 'СКБ': 5.9, 'ВТБ': 4.28, 'СБЕР': 4.0}\ndeposit = []\ndeposit.append(money * per_cent['ТКБ']/100)\ndeposit.append(money * per_cent['СКБ']/100)\ndeposit.append(money * per_cent['ВТБ']/100)\ndeposit.append(money * per_cent['СБЕР']/100)\nprint(\"Максимальная сумма, которую вы можете заработать:\", round(max(deposit)))\n\n\n\n\n\n\n\n\n\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/script.py b/script.py
+--- a/script.py	(revision fb21a8f9b0d74ff32f51483c3d1571da11fa8fbf)
++++ b/script.py	(date 1676477037730)
+@@ -16,3 +16,5 @@
+ 
+ 
+ 
++
++
+Index: test.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>print('Hello world!')\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/test.py b/test.py
+--- a/test.py	(revision fb21a8f9b0d74ff32f51483c3d1571da11fa8fbf)
++++ b/test.py	(date 1677660953902)
+@@ -1,1 +1,9 @@
+-print('Hello world!')
++myFile = open("rrr.txt", "w")
++myFile.write('tttttt')
++print('zzzzzz', file=myFile)
++a = __nm__
++
++
++
++
++
+Index: rrr.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/rrr.txt b/rrr.txt
+--- a/rrr.txt	(revision fb21a8f9b0d74ff32f51483c3d1571da11fa8fbf)
++++ b/rrr.txt	(date 1677232602277)
+@@ -1,0 +1,1 @@
++ttttttzzzzzz
+Index: practice_16/rectangle2.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/practice_16/rectangle2.py b/practice_16/rectangle2.py
+--- a/practice_16/rectangle2.py	(revision fb21a8f9b0d74ff32f51483c3d1571da11fa8fbf)
++++ b/practice_16/rectangle2.py	(date 1677666109072)
+@@ -1,0 +1,17 @@
++class Rectangle:
++
++    def __init__(self,a,b):
++        self.a = a
++        self.b = b
++
++    def get_area(self):
++        return self.a * self.b
++
++class Square:
++    def __init__(self,a):
++        self.a = a
++
++    def get_area_square(self):
++        return self.a ** 2
++
++
+diff --git a/python/Homework 13.8.19.py b/python/Homework 13.8.19.py
+deleted file mode 100644
