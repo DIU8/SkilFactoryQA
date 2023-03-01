@@ -19,4 +19,5 @@ for figure in figures:
     else:
         print(figure.get_area())
 
-print('1')
+print('12')
+
