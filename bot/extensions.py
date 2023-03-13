@@ -33,3 +33,5 @@ class Exchange:
         response = requests.get(f'https://min-api.cryptocompare.com/data/price?fsym={quote_ticker}&tsyms={base_ticker}')
         total_base = json.loads(response.content)[currency[base]]
         return float(total_base * amount)
+
+# ready
