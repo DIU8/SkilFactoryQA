@@ -34,4 +34,5 @@ class Exchange:
         total_base = json.loads(response.content)[currency[base]]
         return float(total_base * amount)
 
-# ready
+# ready!
+
